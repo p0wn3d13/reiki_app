@@ -1,0 +1,59 @@
+name: reiki_app
+description: App de gestión de citas para la asociación de Reiki.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # Backend (Fase 3 - decisión: Supabase + PostgreSQL)
+  supabase_flutter: ^2.5.0
+
+  # Gestión de estado + inyección de dependencias (Fase 2)
+  flutter_riverpod: ^2.5.1
+
+  # Navegación con guards por rol (Fase 2)
+  go_router: ^14.2.0
+
+  # Modelos inmutables y serialización (Fase 2)
+  freezed_annotation: ^2.4.1
+  json_annotation: ^4.9.0
+
+  # Notificaciones push (Fase 2 - solo FCM, no el resto de Firebase)
+  firebase_core: ^2.31.0
+  firebase_messaging: ^14.9.0
+  flutter_local_notifications: ^17.2.1
+
+  # Calendario de selección de fecha (Fase 5)
+  table_calendar: ^3.1.2
+
+  # Formateo de fechas/horas en español
+  intl: ^0.19.0
+
+  # Login con Google y edición de avatar
+  google_sign_in: ^6.2.1
+  image_picker: ^1.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  build_runner: ^2.4.11
+  freezed: ^2.5.2
+  json_serializable: ^6.8.0
+
+flutter:
+  uses-material-design: true
+  # Fuentes personalizadas de la Fase 5 (Nunito/Quicksand para titulares).
+  # Añadir los archivos .ttf a assets/fonts/ y descomentar cuando estén disponibles:
+  # fonts:
+  #   - family: Nunito
+  #     fonts:
+  #       - asset: assets/fonts/Nunito-Regular.ttf
+  #       - asset: assets/fonts/Nunito-Medium.ttf
+  #         weight: 500
